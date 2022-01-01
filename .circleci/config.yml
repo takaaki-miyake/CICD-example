@@ -11,11 +11,11 @@ jobs:
           command: |
             echo 'export PATH=~$PATH:~/.local/bin' >> $BASH_ENV && source $BASH_ENV
             pip install --user -r requirements.txt
-            pip install pytest
+            pip install pytest pytest-cov
       - run: 
           name: Run Unit Tests
           command: |
-            pytest app/testunit01.py 
+            pytest -v
           
 workflows:
   build_test:
