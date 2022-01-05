@@ -3,8 +3,8 @@ import datetime
 app = Flask(__name__)
 
 def calc():
-    x = 100
-    y = 200
+    x = 10
+    y = 20
     z = x * y
     return z
 
