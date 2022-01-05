@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 def calc():
     x = 100
-    y = 2000
+    y = 200
     z = x * y
     return z
 
