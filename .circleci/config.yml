@@ -15,8 +15,17 @@ jobs:
           name: Run Unit Tests
           command: |
             pytest -v
-          
+  image_build:
+    machine: true
+    steps:
+      - checkout
+      - run: echo "$DOCKERHUB_PASSWORD" | docker login --username $DOCKERHUB_USER --password-stdin
+      - run: docker build -t takaakimiyake/flaskapp:1.0 .
+      - run: docker push takaakimiyake/flaskapp:1.0
+
 workflows:
   build_test:
     jobs:
      - run_tests
+     - image_build:
+         context: environment

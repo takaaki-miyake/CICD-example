@@ -15,6 +15,5 @@ spec:
         app: flask
     spec:
       containers:
-      - image: flaskapp:1.0
-        imagePullPolicy: Never
+      - image: takaakimiyake/flaskapp:1.0
         name: flask
