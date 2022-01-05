@@ -27,6 +27,5 @@ workflows:
   build_test:
     jobs:
      - run_tests
-     - image_build
-         context:
-           - environment
+     - image_build:
+         context: environment
