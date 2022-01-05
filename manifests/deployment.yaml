@@ -15,5 +15,5 @@ spec:
         app: flask
     spec:
       containers:
-      - image: takaakimiyake/flaskapp:1.0
+      - image: takaakimiyake/flaskapp:1.1
         name: flask
